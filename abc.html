@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function giaiBac1(){
+           var a = document.getElementById("aId").value
+           var b = document.getElementById("bId").value
+           a=parseFloat(a)
+           b=parseFloat(b)
+           if(a==0)
+           {
+               if(b==0)
+               {
+                   alert("Phuong trinh vo so nghiem")
+               }
+               else alert("Phuong trinh vo nghiem")
+           }else alert("Nghiem pt= " +(-b/a))
+
+        }
+        function doimaunen(){
+            var color = document.getElementById("colorName").value
+            var body = document.getElementById("bodyName")
+            body.style.backgroundColor = color
+        }
+    </script>
+</head>
+<body id="bodyName">
+    <input type="text" id="colorName" onchange="doimaunen()" placeholder="Input Background Color: ">
+    <input type="button" value="Change">
+    <h1>ax+b=0</h1>
+    <input type="text" id="aId" placeholder="Input a:">
+    <input type="text" id="bId" placeholder="Input b:">
+    <input type="button" value="Giai" onclick="giaiBac1()">
+</body>
+</html>
